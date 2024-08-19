@@ -32,15 +32,7 @@ const getData = async (req: Request, res: Response) => {
   }
 };
 
-// send CSRF token to the client
-const getCsrfToken = async (req: Request, res: Response) => {
-  const csrfToken = req.cookies.csrfToken;
-  console.log('csrfTokenAA: ', csrfToken); //removeEytan
-  res.json({ csrfToken });
-};
-
 export default {
   cleanBody,
   getData,
-  getCsrfToken,
 };
